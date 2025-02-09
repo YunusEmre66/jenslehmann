@@ -12,9 +12,11 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import KarierreTitelData from './datas/KarierreTitelData';
 
-const { coachTitel, ambassadorTitel, commentatorTitel, speakerTitel, goalKeeperTitel } = KarierreTitelData;
-
+const { coachTitel, ambassadorTitel, commentatorTitel, speakerTitel, jensLehmannTitel } = KarierreTitelData;
 const { coach, ambassador, speaker, moderator, commentator } = shadowData;
+
+const { coachFigure, commentatorFigure, ambassadorFigure, speakerFigure, jensLehmannName } = FigureData;
+
 
 
 
@@ -135,7 +137,7 @@ export default function App() {
               className="slide-text"
             >
               <div className="fixed-element">
-                <img src={FigureData[11]} alt="name" />
+                <img src={jensLehmannName} alt="name" />
               </div>
 
 
@@ -146,7 +148,7 @@ export default function App() {
               <SwiperSlide className='silluhetto-slide' >
 
                 <div className="image-container">
-                  <img src={FigureData[1]} alt="figur1" style={{ zIndex: 2, marginLeft: '-140px' }} />
+                  <img src={coachFigure} alt="figur1" style={{ zIndex: 2, marginLeft: '-140px' }} />
                   <div className="fixed-element-karierre">
                     <img src={coachTitel} alt="coachTitel" />
                   </div>
@@ -154,7 +156,7 @@ export default function App() {
               </SwiperSlide>
               <SwiperSlide className='silluhetto-slide' >
                 <div className="image-container">
-                  <img src={FigureData[2]} alt="figur2" />
+                  <img src={commentatorFigure} alt="figur2" />
                   <div className="fixed-element-karierre">
                     <img src={ambassadorTitel} alt="ambassadorTitel" />
                   </div>
@@ -163,7 +165,7 @@ export default function App() {
               </SwiperSlide>
               <SwiperSlide className='silluhetto-slide' >
                 <div className="image-container">
-                  <img src={FigureData[0]} alt="figur3" />
+                  <img src={ambassadorFigure} alt="figur3" />
                   <div className="fixed-element-karierre">
                     <img src={commentatorTitel} alt="commentatorTitel" />
                   </div>
@@ -172,7 +174,7 @@ export default function App() {
               </SwiperSlide>
               <SwiperSlide className='silluhetto-slide' >
                 <div className="image-container">
-                  <img src={FigureData[3]} alt="figur3" />
+                  <img src={speakerFigure} alt="figur3" />
                   <div className="fixed-element-karierre">
                     <img src={speakerTitel} alt="speakerTitel" />
                   </div>
@@ -199,7 +201,6 @@ export default function App() {
         <SwiperSlide>
           <img src={ImagesData[3]} />
         </SwiperSlide>
-
         <SwiperSlide>
           <img src={ImagesData[4]} />
         </SwiperSlide>
