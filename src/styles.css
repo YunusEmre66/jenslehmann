@@ -174,14 +174,14 @@ body {
   margin-bottom: 50px;
 }
 
-.face-1,
-.face-2,
-.face-4,
-.face-5 {
+.ambassador-face,
+.coach-face,
+.speaker-face,
+.moderator-face {
   height: 300px;
 }
 
-.face-3 {
+.commentator-face {
   height: 400px;
 
 }

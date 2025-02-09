@@ -12,13 +12,9 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import KarierreTitelData from './datas/KarierreTitelData';
 
-const { coachTitel, ambassadorTitel, commentatorTitel, speakerTitel, jensLehmannTitel } = KarierreTitelData;
+const { coachTitel, ambassadorTitel, commentatorTitel, speakerTitel } = KarierreTitelData;
 const { coach, ambassador, speaker, moderator, commentator } = shadowData;
-
 const { coachFigure, commentatorFigure, ambassadorFigure, speakerFigure, jensLehmannName } = FigureData;
-
-
-
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -26,8 +22,6 @@ export default function App() {
   const [fadeOut, setFadeOut] = useState(false);
   const [onSlideIndex, setonSlideIndex] = useState(0)
   const karierreRef = useRef(null);
-
-
 
 
   useEffect(() => {
@@ -41,8 +35,8 @@ export default function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  const handleSlideChange = () => {
 
+  const handleSlideChange = () => {
     console.log('slide changed');
     if (karierreRef.current) {
 
@@ -66,14 +60,12 @@ export default function App() {
   if (loading) {
     return (
       <div className={`loading-screen ${fadeOut ? 'fade-out' : ''}`}>
-
-
         <div className="shadowData-container">
-          <img src={coach} alt="coach" className="face-image face-2" />
-          <img src={ambassador} alt="ambassador" className="face-image face-1" />
-          <img src={commentator} alt="commentator" className=" face-3" />
-          <img src={speaker} alt="speaker" className="face-image face-4" />
-          <img src={moderator} alt="moderator" className="face-image face-5" />
+          <img src={coach} alt="coach" className="face-image coach-face" />
+          <img src={ambassador} alt="ambassador" className="face-image ambassador-face" />
+          <img src={commentator} alt="commentator" className=" commentator-face" />
+          <img src={speaker} alt="speaker" className="face-image speaker-face" />
+          <img src={moderator} alt="moderator" className="face-image moderator-face" />
         </div>
         <p className="loading-subtitle">THE FIVE FACES</p>
         <div className="loading-divider">
@@ -141,10 +133,7 @@ export default function App() {
               </div>
 
 
-              {/* 
-              <div>
-                <img src={KarierreTitelData[0]} alt="" />
-              </div> */}
+
               <SwiperSlide className='silluhetto-slide' >
 
                 <div className="image-container">
