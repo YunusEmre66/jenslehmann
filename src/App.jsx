@@ -12,6 +12,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import KarierreTitelData from './datas/KarierreTitelData';
 
+const { coachTitel, ambassadorTitel, commentatorTitel, speakerTitel, goalKeeperTitel } = KarierreTitelData;
 
 const { coach, ambassador, speaker, moderator, commentator } = shadowData;
 
@@ -147,7 +148,7 @@ export default function App() {
                 <div className="image-container">
                   <img src={FigureData[1]} alt="figur1" style={{ zIndex: 2, marginLeft: '-140px' }} />
                   <div className="fixed-element-karierre">
-                    <img src={KarierreTitelData[0]} alt="coach" />
+                    <img src={coachTitel} alt="coachTitel" />
                   </div>
                 </div>
               </SwiperSlide>
@@ -155,7 +156,7 @@ export default function App() {
                 <div className="image-container">
                   <img src={FigureData[2]} alt="figur2" />
                   <div className="fixed-element-karierre">
-                    <img src={KarierreTitelData[3]} alt="ambassador" />
+                    <img src={ambassadorTitel} alt="ambassadorTitel" />
                   </div>
                 </div>
 
@@ -164,7 +165,7 @@ export default function App() {
                 <div className="image-container">
                   <img src={FigureData[0]} alt="figur3" />
                   <div className="fixed-element-karierre">
-                    <img src={KarierreTitelData[1]} alt="commentator" />
+                    <img src={commentatorTitel} alt="commentatorTitel" />
                   </div>
                 </div>
 
@@ -173,7 +174,7 @@ export default function App() {
                 <div className="image-container">
                   <img src={FigureData[3]} alt="figur3" />
                   <div className="fixed-element-karierre">
-                    <img src={KarierreTitelData[4]} alt="speaker" />
+                    <img src={speakerTitel} alt="speakerTitel" />
                   </div>
                 </div>
 
