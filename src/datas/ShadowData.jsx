@@ -1,10 +1,9 @@
-const faces = [
-    '/images/shadow/shadow.png',
-    '/images/shadow/shadow1.png',
-    '/images/shadow/shadow2.png',
-    '/images/shadow/shadow3.png',
-    '/images/shadow/shadow4.png',
-    '/images/shadow/shadow5.png'
-  ];
-  
-  export default faces;
+const ShadowData = {
+  coach: '/images/shadow/shadow.png',
+  ambassador: '/images/shadow/shadow1.png',
+  commentator: '/images/shadow/shadow2.png',
+  speaker: '/images/shadow/shadow3.png',
+  moderator: '/images/shadow/shadow4.png',
+};
+
+export default ShadowData;

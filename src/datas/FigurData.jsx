@@ -10,7 +10,7 @@ const FigurData = [
     '/images/figure/figur2.png',
     '/images/figure/figur3.png',
     '/images/figure/figur4.png',
-    '/images/figure/jl_title.png',
+    '/images/figure/jenslehmann.png',
     '/images/figure/t_04_en.png',
 
 ]

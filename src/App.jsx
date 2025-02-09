@@ -12,15 +12,16 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import KarierreTitelData from './datas/KarierreTitelData';
 
-const { face1, face2, face3, face4, face5 } = shadowData;
 
-console.log(face1, face2, face3, face4, face5);
+const { coach, ambassador, speaker, moderator, commentator } = shadowData;
+
 
 
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [dotIndex, setDotIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
+  const [onSlideIndex, setonSlideIndex] = useState(0)
   const karierreRef = useRef(null);
 
 
@@ -38,7 +39,10 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
   const handleSlideChange = () => {
+
+    console.log('slide changed');
     if (karierreRef.current) {
+
       karierreRef.current.style.opacity = '0';
       setTimeout(() => {
         karierreRef.current.style.opacity = '1';
@@ -62,11 +66,11 @@ export default function App() {
 
 
         <div className="shadowData-container">
-          <img src={shadowData[1]} alt="face" className="face-image face-2" />
-          <img src={shadowData[0]} alt="face" className="face-image face-1" />
-          <img src={shadowData[2]} alt="face" className=" face-3" />
-          <img src={shadowData[3]} alt="face" className="face-image face-4" />
-          <img src={shadowData[4]} alt="face" className="face-image face-5" />
+          <img src={coach} alt="coach" className="face-image face-2" />
+          <img src={ambassador} alt="ambassador" className="face-image face-1" />
+          <img src={commentator} alt="commentator" className=" face-3" />
+          <img src={speaker} alt="speaker" className="face-image face-4" />
+          <img src={moderator} alt="moderator" className="face-image face-5" />
         </div>
         <p className="loading-subtitle">THE FIVE FACES</p>
         <div className="loading-divider">
@@ -122,7 +126,10 @@ export default function App() {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
               }}
+              onSlideChange={(e) => {
 
+                console.log('slide changed', e.activeIndex);
+              }}
               modules={[Navigation, Pagination]}
               className="slide-text"
             >
@@ -178,6 +185,8 @@ export default function App() {
             </Swiper>
           </div>
         </SwiperSlide>
+
+
         <SwiperSlide>
           <img src={ImagesData[1]} />
         </SwiperSlide>
@@ -209,6 +218,13 @@ export default function App() {
           <img src={ImagesData[9]} />
         </SwiperSlide>
       </Swiper>
+
+      {
+        onSlideIndex
+      }
+
+      <div >swiper</div>
+
 
 
 

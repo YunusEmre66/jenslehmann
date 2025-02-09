@@ -1,5 +1,4 @@
 
-
 const SilhoutteData = [
     '/images/shadow/shadow.png',
     '/images/shadow/shadow1.png',
